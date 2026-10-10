@@ -1,0 +1,205 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ivory: #f7f0e0;
+  --parchment: #eee2c8;
+  --gold: #b8923a;
+  --maroon: #5a1a20;
+  --night: #13151c;
+  --brown: #3a2a1e;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-ivory font-body text-brown antialiased;
+    font-size: 17px;
+    line-height: 1.8;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display;
+    line-height: 1.1;
+    letter-spacing: -0.005em;
+  }
+
+  ::selection {
+    background: rgba(184, 146, 58, 0.35);
+  }
+
+  /* Visible, elegant focus states */
+  :focus-visible {
+    outline: 2px solid #d6b566;
+    outline-offset: 4px;
+    border-radius: 2px;
+  }
+
+  [id] {
+    scroll-margin-top: 5rem;
+  }
+
+  /* Tibetan / Dzongkha script needs generous line height */
+  :lang(bo),
+  :lang(dz),
+  .tibetan {
+    font-family: "Noto Serif Tibetan", "Noto Sans Tibetan", Jomolhari,
+      "Microsoft Himalaya", Kailasa, "Tibetan Machine Uni", serif;
+    line-height: 1.7;
+  }
+}
+
+@layer components {
+  /* ---------- Parchment texture ---------- */
+  .parchment-texture {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='260' height='260'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .45  0 0 0 0 .32  0 0 0 0 .16  0 0 0 .22 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  }
+
+  .parchment-card {
+    @apply parchment-texture relative border border-gold/40 bg-ivory shadow-[0_18px_50px_-24px_rgba(58,42,30,0.45)];
+  }
+
+  /* ---------- Section tones ---------- */
+  .tone-night {
+    background: radial-gradient(
+        ellipse 70% 520px at 50% 0%,
+        rgba(184, 146, 58, 0.07),
+        transparent
+      ),
+      #13151c;
+    color: #f2e9d4;
+  }
+  .tone-parchment {
+    @apply parchment-texture;
+    background-color: #eee2c8;
+    color: #3a2a1e;
+  }
+  .tone-ivory {
+    @apply parchment-texture;
+    background-color: #f7f0e0;
+    color: #3a2a1e;
+  }
+  .tone-beige {
+    @apply parchment-texture;
+    background-color: #e2d4b6;
+    color: #3a2a1e;
+  }
+  .tone-maroon {
+    background: radial-gradient(
+        ellipse 70% 640px at 50% 15%,
+        rgba(214, 181, 102, 0.09),
+        transparent
+      ),
+      #4a1318;
+    color: #f4e8d0;
+  }
+  .tone-mist {
+    background: linear-gradient(180deg, #223040 0%, #35495a 55%, #4b6274 100%);
+    color: #f1ebdc;
+  }
+  .tone-dusk {
+    background: linear-gradient(180deg, #10131b 0%, #1b2436 50%, #2a2f45 100%);
+    color: #f2e9d4;
+  }
+  .tone-gold {
+    background: radial-gradient(
+        ellipse at 50% 40%,
+        #f6e6b8 0%,
+        #ecd49a 45%,
+        #d9b868 100%
+      );
+    color: #3a2a1e;
+  }
+
+  /* ---------- Typography helpers ---------- */
+  .eyebrow {
+    @apply font-body text-[0.7rem] font-medium uppercase tracking-sacred;
+  }
+
+  .reading {
+    @apply mx-auto max-w-[38rem];
+    line-height: 1.95;
+  }
+
+  .drop-cap::first-letter {
+    @apply float-left pr-3 pt-1 font-display text-[4.6rem] font-semibold leading-[0.8] text-gold;
+  }
+
+  .gold-text {
+    padding-bottom: 0.14em; /* room for descenders (g, y) inside the clipped gradient */
+    background: linear-gradient(180deg, #e6cf98 0%, #b8923a 55%, #8c6a22 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .gold-text-light {
+    padding-bottom: 0.14em;
+    background: linear-gradient(180deg, #f6e6b8 0%, #d6b566 60%, #b8923a 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* ---------- Buttons ---------- */
+  .btn-gold {
+    @apply inline-flex items-center gap-3 border border-gold-light/70 bg-transparent px-8 py-3.5 font-body text-[0.72rem] font-medium uppercase tracking-sacred text-gold-soft transition-all duration-500 hover:bg-gold hover:text-night;
+  }
+
+  /* ---------- Incense smoke ---------- */
+  .smoke-puff {
+    position: absolute;
+    bottom: 0;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: radial-gradient(
+      circle,
+      rgba(240, 232, 214, 0.5) 0%,
+      rgba(240, 232, 214, 0) 70%
+    );
+    filter: blur(14px);
+    opacity: 0;
+    animation: smoke 9s ease-out infinite;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .mask-fade-t {
+    -webkit-mask-image: linear-gradient(180deg, transparent 0%, #000 45%);
+    mask-image: linear-gradient(180deg, transparent 0%, #000 45%);
+  }
+  .mask-fade-b {
+    -webkit-mask-image: linear-gradient(180deg, #000 70%, transparent);
+    mask-image: linear-gradient(180deg, #000 70%, transparent);
+  }
+}
+
+/* ---------- Reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+  .smoke-puff {
+    display: none;
+  }
+}
