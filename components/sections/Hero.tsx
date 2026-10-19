@@ -84,7 +84,7 @@ export function Hero() {
           animate={{ opacity: 1 }}
           transition={{ duration: 1.6, delay: 1 }}
           lang="bo"
-          className="tibetan mt-6 text-4xl text-gold-light sm:text-5xl"
+          className="mx-auto mt-6 max-w-full px-2 font-jomolhari text-[clamp(1.75rem,6.2vw,4rem)] leading-[1.7] text-gold-light sm:px-4"
         >
           {site.tibetanName}
         </motion.p>
