@@ -102,15 +102,15 @@ export function LineageOverview() {
               src={current.image}
               alt={current.imageAlt}
               placeholderLabel={current.imageLabel}
+              caption={current.imageCaption ?? current.name}
+              captionClassName={current.imageCaption ? "text-center font-jomolhari text-2xl not-italic sm:text-3xl" : undefined}
               motif={current.symbol}
-              hideCaption
+              imgClassName="scale-[0.92]"
+              borderless
             />
             <p className="eyebrow mt-6 text-[0.62rem] text-gold-ink">
               Chapter {pad(current.number)}
             </p>
-            <h3 className="mt-1 font-display text-3xl font-semibold uppercase tracking-[0.05em]">
-              {current.name}
-            </h3>
             {current.place && (
               <p className="mt-3 flex items-start gap-2 text-sm text-gold-ink">
                 <MapPin className="mt-0.5 h-4 w-4 shrink-0" aria-hidden="true" />

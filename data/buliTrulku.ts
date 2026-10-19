@@ -26,7 +26,7 @@ import type {
 export const site = {
   name: "Kyabje Buli Trulku Rinpoche",
   shortName: "BULI TRULKU",
-  tibetanName: "བུ་ལི་སྤྲུལ་སྐུ",
+  tibetanName: "སྐྱབས་རྗེ་བྷུ་ལི་སྤྲུལ་སྐུ་རིན་པོ་ཆེ།",
   concept: "The Living Lineage of Buli Trulku Rinpoche",
   subtitle: "An unbroken journey of compassion, wisdom and devotion",
   title: "Kyabje Buli Trulku Rinpoche | Life, Lineage & Legacy",
@@ -50,6 +50,8 @@ export const images = {
   shedra: "/images/places/droduel-tshangchen-shedra.jpg",
   foundationLogo: "/images/foundation/logo.png",
   foundationMonastery: "/images/foundation/monastery.jpg",
+  foundationLaunch: "/images/foundation/launch-rinpoche.jpg",
+  foundationKhenpo: "/images/foundation/khenpo-rinpoche.jpg",
   final: "/images/rinpoche/final-portrait.png",
 };
 
@@ -59,6 +61,7 @@ export const nav = [
   { key: "timeline", label: "Timeline", href: "/timeline" },
   { key: "teachers", label: "Teachers", href: "/teachers" },
   { key: "places", label: "Places", href: "/places" },
+  { key: "foundation", label: "Foundation", href: "/foundation" },
   { key: "gallery", label: "Gallery", href: "/gallery" },
   { key: "legacy", label: "Legacy", href: "/#legacy" },
 ];
@@ -98,6 +101,7 @@ export const lineage: LineageHolder[] = [
     image: "/images/lineage/01-phagpa-magapa.webp",
     imageLabel: "Phagpa Magapa",
     imageAlt: "Traditional painting of Phagpa Magapa seated with a staff and alms bowl, with his name inscribed in Tibetan",
+    imageCaption: "࿑ འཕགས་པ་མ་འགགས་པ། ༼ ༡ ༽",
     summary: "One of the ten close disciples of the Buddha Gautama.",
   },
   {
@@ -119,6 +123,7 @@ export const lineage: LineageHolder[] = [
     image: "/images/lineage/02-tsang-legdup.webp",
     imageLabel: "Tsang Legdup",
     imageAlt: "Traditional painting of Tsang Legdup seated, one hand raised, with the name inscribed in Tibetan",
+    imageCaption: "࿑ གཙང་ལེགས་གྲུབ། ༼ ༢ ༽",
     summary: "Traditionally understood as the rebirth of Phagpa Magapa, born in central Tibet.",
   },
   {
@@ -141,6 +146,7 @@ export const lineage: LineageHolder[] = [
     image: "/images/lineage/03-yudra-nyingpo.webp",
     imageLabel: "Yudra Nyingpo",
     imageAlt: "Traditional painting of Yudra Nyingpo seated, holding a text, with his name inscribed in Tibetan",
+    imageCaption: "࿑ རྒྱལ་མོ་གཡུ་སྒྲ་སྙིང་པོ། ༼ ༣ ༽",
     summary: "One of the twenty-five heart disciples of Guru Rinpoche.",
   },
   {
@@ -166,6 +172,7 @@ export const lineage: LineageHolder[] = [
     image: "/images/lineage/04-choeying-rangdrol.webp",
     imageLabel: "Choeying Rangdrol",
     imageAlt: "Traditional painting of His Eminence Choeying Rangdrol seated, with his name inscribed in Tibetan",
+    imageCaption: "࿑ ཆོས་དབྱིངས་རང་གྲོལ། ༼ ༤ ༽",
     summary: "Travelled from Tibet to Bumthang and established Buli Lhuendrup Choeling Monastery.",
   },
   {
@@ -183,6 +190,7 @@ export const lineage: LineageHolder[] = [
     image: "/images/lineage/05-choing-lhuendup.webp",
     imageLabel: "Choing Lhuendup",
     imageAlt: "Traditional painting of Choing Lhuendup seated in meditation, with his name inscribed in Tibetan",
+    imageCaption: "࿑ ཆོས་དབྱིངས་ལྷུན་གྲུབ། ༼ ༥ ༽",
     summary: "Born at Kelai village in Trongsa, Mangde Tshozhi.",
   },
   {
@@ -203,6 +211,7 @@ export const lineage: LineageHolder[] = [
     image: "/images/lineage/06-kencho-gyeltshen.webp",
     imageLabel: "Kencho Gyeltshen",
     imageAlt: "Traditional painting of Kencho Gyeltshen seated on a lotus, with his name inscribed in Tibetan",
+    imageCaption: "࿑ དཀོན་མཆོག་རྒྱལ་མཚན། ༼ ༦ ༽",
     summary: "Born at Chendebji in Trongsa.",
   },
   {
@@ -219,6 +228,7 @@ export const lineage: LineageHolder[] = [
     image: "/images/lineage/07-tenzin-namgyel.webp",
     imageLabel: "Tenzin Namgyel",
     imageAlt: "Traditional painting of Tenzin Namgyel seated, holding a vajra and a vase",
+    imageCaption: "࿑ བསྟན་འཛིན་རྣམ་རྒྱལ། ༼ ༧ ༽",
     summary: "Incarnated at Gyeltsa in Bumthang, Bhutan.",
   },
   {
@@ -233,9 +243,10 @@ export const lineage: LineageHolder[] = [
     ],
     layout: "portrait",
     symbol: "manuscript",
-    image: "/images/lineage/08-sherub-jungney.jpg",
+    image: "/images/lineage/08-sherub-jungney.webp",
     imageLabel: "Sherub Jungney",
     imageAlt: "Portrait of Sherub Jungney",
+    imageCaption: "࿑ ཤེས་རབ་འབྱུངས་གནས། ༼ ༨ ༽",
     summary: "Reborn in Kela after Tenzin Namgyel.",
   },
   {
@@ -253,6 +264,7 @@ export const lineage: LineageHolder[] = [
     image: "/images/lineage/09-shacha-namgyel.webp",
     imageLabel: "Shacha Namgyel",
     imageAlt: "Traditional painting of Shacha Namgyel seated, with long hair tied in a topknot, holding a bowl",
+    imageCaption: "࿑ ཤཱཀྱ་རྣམ་རྒྱལ། ༼ ༩ ༽",
     summary: "The second time the Rinpoche was born in Kela.",
   },
   {
@@ -272,9 +284,10 @@ export const lineage: LineageHolder[] = [
     },
     layout: "portrait",
     symbol: "wheel",
-    image: "/images/lineage/10-khachap-dorji.jpg",
+    image: "/images/lineage/10-khachap-dorji.webp",
     imageLabel: "Khachap Dorji",
     imageAlt: "Portrait of Khachap Dorji",
+    imageCaption: "࿑ བྷུ་ལི་མཁའ་ཁྱབ་རྡོ་རྗེ། ༼ ༡༠ ༽",
     summary: "Born at Buli Wogmin Lhuendrup Choeling in Bumthang Chummey.",
   },
   {
@@ -434,6 +447,39 @@ export const foundation = {
   text: [
     "On 21 November 2014, Buli Trulku established the non-profit organization Duejom Terling Shedra Foundation.",
     "The foundation aims to help uphold the light of Buddha Dharma and support monks, nuns and practitioners.",
+  ],
+};
+
+/* ──────────────────────── Foundation page ──────────────────────── */
+// Source: the foundation's own announcement, "Launching of Foundation".
+// It spells the name "Dudjom Terling Shedra Foundation (DTSF)".  // VERIFY spelling
+
+export const foundationPage = {
+  launch: {
+    heading: "Launching of the Foundation",
+    place:
+      "Zangtho Pelri, Tshothang; Zangthi, Lauri Geog, Jomotsangkha Dungkhag, Samdrup Jongkhar Dzongkhag",
+    text: [
+      "Duejom Terling Shedra Foundation was launched by Venerable Buli Trulku on 21 November 2014 at Zangtho Pelri, Tshothang; Zangthi, Lauri Geog, Jomotsangkha Dungkhag under Samdrup Jongkhar Dzongkhag.",
+      "The foundation is initiated by H.E. Buli Trulku, Lama Sonam Loday, with collaborative effort from Khenpo, disciples, sponsors and patrons as per the Bhutan Religious Act, 2010. It is a non-profitable organization which will support and enhance the Buddhist teaching both within the country and abroad. It is also to extend the wisdom and compassion of Buddha as widely as possible for the benefit of all sentient beings.",
+    ],
+  },
+  vision:
+    "Duejom Terling Shedra Foundation envisions to become an independent religious organisation that is dedicated to uphold the light of Buddha Dharma until the end of the worldly existence.",
+  mission:
+    "The foundation is committed to ensuring cohesion, affinity and sustainability of religious institutions and centres established by or under the refuge of His Eminence Buli Trulku Rinpoche in pursuit of the common goal of attaining peace and harmony in the world.",
+  objectives: [
+    "Ensure the sustainability of various religious institutions and meditation centres established by His Eminence, by providing the necessary resources, capital and manpower.",
+    "Provide basic needs to monks, nuns and practitioners for their study, practice and retreat.",
+    "Provide assistance to perform religious activities for the welfare of communities, the country and the world as a whole.",
+    "Organize the annual Moenlam Chenmo, Dorsem Drupchen, Tshemar Soelchoe Bum and Purpai Tordok.",
+    "Organize Wang Lung Thri Sum for the benefit of the general public and devotees.",
+    "Raise awareness among people of the advantages of following the spiritual path.",
+    "Emphasize activities that enhance the conservation of the environment and the promotion of Gross National Happiness / Global Happiness.",
+  ],
+  membership: [
+    "On this particular day, Rinpoche and Khenpo registered as members of the DTSF, followed by more than 300 people from all parts of the country who submitted their names to become registered members.",
+    "For further details, visit the foundation's Facebook page, “Duejom Terling Shedra Foundation”, where the terms and conditions and the membership criteria are also available.",
   ],
 };
 

@@ -8,7 +8,7 @@ const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const data = readFileSync(join(root, "data/buliTrulku.ts"), "utf8");
 
 // literal paths + the helper-built ones (teachers, places, gallery)
-const paths = new Set(data.match(/"\/images\/[^"]+\.(?:jpg|png)"/g)?.map((s) => s.slice(1, -1)) ?? []);
+const paths = new Set(data.match(/"\/images\/[^"]+\.(?:jpg|png|webp)"/g)?.map((s) => s.slice(1, -1)) ?? []);
 
 const helper = (re, build) => {
   for (const m of data.matchAll(re)) build(m).forEach((p) => paths.add(p));

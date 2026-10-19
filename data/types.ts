@@ -36,6 +36,7 @@ export interface LineageHolder {
   image?: string;
   imageLabel: string;
   imageAlt: string;
+  imageCaption?: string;
   /** One line used in the /lineage overview */
   summary: string;
 }

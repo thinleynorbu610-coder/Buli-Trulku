@@ -29,6 +29,7 @@ const en = {
   "nav.timeline": "Timeline",
   "nav.teachers": "Teachers",
   "nav.places": "Places",
+  "nav.foundation": "Foundation",
   "nav.gallery": "Gallery",
   "nav.legacy": "Legacy",
   "nav.search": "Search",

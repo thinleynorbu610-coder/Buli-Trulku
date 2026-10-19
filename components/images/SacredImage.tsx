@@ -18,16 +18,18 @@ export type ImageVariant =
   | "tall";
 
 export interface SacredImageProps {
-  /** Path inside /public, e.g. "/images/lineage/01-phagpa-magapa.jpg". Missing or empty → placeholder. */
+  /** Path inside /public, e.g. "/images/lineage/01-phagpa-magapa.webp". Missing or empty → placeholder. */
   src?: string;
   /** Describe the photograph for screen readers. Always provide this. */
   alt: string;
   caption?: string;
+  captionClassName?: string;
   year?: string;
   location?: string;
   credit?: string;
   /** Small label printed on the placeholder, e.g. the person's name */
   placeholderLabel?: string;
+  borderless?: boolean;
   variant?: ImageVariant;
   motif?: Motif;
   /** "dark" placeholders sit better on night / maroon sections */
@@ -67,10 +69,12 @@ export function SacredImage({
   src,
   alt,
   caption,
+  captionClassName,
   year,
   location,
   credit,
   placeholderLabel,
+  borderless = false,
   variant = "portrait",
   motif,
   tone = "light",
@@ -91,9 +95,14 @@ export function SacredImage({
     <figure className={cn("group relative", className)}>
       <div
         className={cn(
-          "relative w-full overflow-hidden border",
+          "relative w-full overflow-hidden",
+          !borderless && "border",
           ratio[variant],
-          dark ? "border-gold/40 bg-black/30" : "border-gold/50 bg-parchment",
+          borderless
+            ? "bg-transparent"
+            : dark
+              ? "border-gold/40 bg-black/30"
+              : "border-gold/50 bg-parchment",
         )}
       >
         {status === "loaded" && src ? (
@@ -178,7 +187,11 @@ export function SacredImage({
             dark ? "text-ivory/75" : "text-brown/80",
           )}
         >
-          {caption && <span className="block font-display text-base italic">{caption}</span>}
+          {caption && (
+            <span className={cn("block text-base", captionClassName ?? "font-display italic")}>
+              {caption}
+            </span>
+          )}
           {(year || location) && (
             <span
               className={cn(

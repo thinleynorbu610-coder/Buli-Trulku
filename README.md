@@ -36,14 +36,14 @@ can add images one at a time.
 
 ```bash
 npm run images
-# ✔ /images/lineage/01-phagpa-magapa.jpg
-# · /images/lineage/02-tsang-legdup.jpg      (· = still a placeholder)
+# ✔ /images/lineage/01-phagpa-magapa.webp
+# · /images/lineage/02-tsang-legdup.webp      (· = still a placeholder)
 ```
 
 | Where | Path pattern |
 |---|---|
 | Hero landscape | `public/images/hero/prayer-flags.png` |
-| Lineage portraits (1–10) | `public/images/lineage/01-phagpa-magapa.jpg` … `10-khachap-dorji.jpg` |
+| Lineage portraits (1–10) | `public/images/lineage/01-phagpa-magapa.webp` … `10-khachap-dorji.webp` |
 | His Eminence | `public/images/rinpoche/portrait-main.jpg`, `age-16.jpg`, `enthronement-1960.jpg`, `final-portrait.jpg` |
 | Teachers | `public/images/teachers/<name>.jpg` |
 | Places | `public/images/places/<name>.jpg` |
@@ -58,7 +58,7 @@ Every image component accepts `src`, `alt`, `caption`, `year`, `location`, `cred
 
 ```tsx
 <RinpocheImage     src="/images/rinpoche/portrait-main.jpg" alt="…" caption="…" year="…" location="…" credit="…" />
-<LineagePortrait   src="/images/lineage/01-phagpa-magapa.jpg" alt="…" />
+<LineagePortrait   src="/images/lineage/01-phagpa-magapa.webp" alt="…" />
 <MonasteryImage    src="/images/places/zangthi.jpg" alt="…" />
 <HistoricalImage   src="/images/gallery/historical/01.jpg" alt="…" />
 ```

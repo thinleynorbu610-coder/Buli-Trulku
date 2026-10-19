@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 import { useImageStatus } from "@/hooks/useImageStatus";
 import { WheelMotif } from "@/components/art/Motifs";
 import { ButterLamp, GoldDivider, IncenseSmoke } from "@/components/art/Ornaments";
@@ -78,6 +80,16 @@ export function FoundationSection() {
                 </Reveal>
               ))}
             </div>
+
+            <Reveal delay={0.25} className="mt-8">
+              <Link
+                href="/foundation"
+                className="eyebrow inline-flex items-center gap-2 border-b border-gold-ink/60 pb-1 text-[0.7rem] text-gold-ink transition hover:border-brown hover:text-brown"
+              >
+                Vision, mission &amp; objectives
+                <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />
+              </Link>
+            </Reveal>
 
             <Reveal delay={0.3} className="mt-10 flex items-end gap-6" >
               <ButterLamp />

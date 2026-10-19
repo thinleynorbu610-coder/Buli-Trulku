@@ -51,6 +51,7 @@ const config: Config = {
       fontFamily: {
         display: ['"Cormorant Garamond"', "Georgia", "serif"],
         body: ["Inter", "system-ui", "sans-serif"],
+        jomolhari: ["Jomolhari", "serif"],
         tibetan: [
           '"Noto Serif Tibetan"',
           '"Noto Sans Tibetan"',

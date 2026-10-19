@@ -36,7 +36,11 @@ function Portrait({ holder }: { holder: LineageHolder }) {
       src={holder.image}
       alt={holder.imageAlt}
       placeholderLabel={holder.imageLabel}
+      caption={holder.imageCaption ?? holder.name}
+      captionClassName={holder.imageCaption ? "text-center font-jomolhari text-2xl not-italic sm:text-3xl" : undefined}
       motif={holder.symbol}
+      imgClassName="scale-[0.92]"
+      borderless
     />
   );
 }
