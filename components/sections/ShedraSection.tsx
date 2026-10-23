@@ -5,14 +5,15 @@ import { CountUp } from "@/components/ui/CountUp";
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionShell } from "@/components/ui/SectionShell";
 import { images, shedra } from "@/data/buliTrulku";
+import type { Tone } from "@/lib/utils";
 
 /** 2005 — the Dharma continues. "60" is the heart of this chapter. */
-export function ShedraSection() {
+export function ShedraSection({ from = "beige" }: { from?: Tone } = {}) {
   return (
     <SectionShell
       id="shedra"
       tone="maroon"
-      from="beige"
+      from={from}
       aria-labelledby="shedra-title"
       backdrop={
         // a very faint wheel, static, behind everything

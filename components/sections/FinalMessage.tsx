@@ -5,10 +5,11 @@ import { Parallax } from "@/components/ui/Parallax";
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionShell } from "@/components/ui/SectionShell";
 import { finalMessage, images } from "@/data/buliTrulku";
+import type { Tone } from "@/lib/utils";
 
-export function FinalMessage() {
+export function FinalMessage({ from = "gold" }: { from?: Tone } = {}) {
   return (
-    <SectionShell id="journey-continues" tone="night" from="gold" aria-labelledby="final-title">
+    <SectionShell id="journey-continues" tone="night" from={from} aria-labelledby="final-title">
       <Reveal className="text-center">
         <LotusMotif className="mx-auto mb-8 h-14 w-14 text-gold-light" />
         <h2

@@ -4,6 +4,7 @@ import "./globals.css";
 import { Providers } from "@/components/layout/Providers";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { ContinueExploring } from "@/components/layout/ContinueExploring";
 import { site } from "@/data/buliTrulku";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
@@ -57,6 +58,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           </a>
           <Navbar />
           <main id="main">{children}</main>
+          <ContinueExploring />
           <Footer />
         </Providers>
       </body>

@@ -56,14 +56,14 @@ export const images = {
 };
 
 export const nav = [
-  { key: "story", label: "Story", href: "/#story" },
-  { key: "lineage", label: "Lineage", href: "/lineage" },
-  { key: "timeline", label: "Timeline", href: "/timeline" },
-  { key: "teachers", label: "Teachers", href: "/teachers" },
-  { key: "places", label: "Places", href: "/places" },
-  { key: "foundation", label: "Foundation", href: "/foundation" },
-  { key: "gallery", label: "Gallery", href: "/gallery" },
-  { key: "legacy", label: "Legacy", href: "/#legacy" },
+  { key: "story", label: "Story", href: "/#story", blurb: "The biography, told from the beginning." },
+  { key: "lineage", label: "Lineage", href: "/lineage", blurb: "Eleven lineage holders, from Phagpa Magapa to the present." },
+  { key: "timeline", label: "Timeline", href: "/timeline", blurb: "The milestones of a life, from 1949 to today." },
+  { key: "teachers", label: "Teachers", href: "/teachers", blurb: "The masters named in the biography, and what they gave." },
+  { key: "places", label: "Places", href: "/places", blurb: "Monasteries, retreat places and sacred sites." },
+  { key: "foundation", label: "Foundation", href: "/foundation", blurb: "The Duejom Terling Shedra Foundation, est. 2014." },
+  { key: "gallery", label: "Gallery", href: "/gallery", blurb: "Portraits, places and ceremonies in nine collections." },
+  { key: "legacy", label: "Legacy", href: "/legacy", blurb: "The shedra, thirteen institutions, and the journey ahead." },
 ];
 
 /* ───────────────────────── Introduction ───────────────────────── */
@@ -575,7 +575,7 @@ export const lifeEvents: LifeEvent[] = [
     title: "Establishment of Droduel Tshangchen Shedra",
     description:
       "Established on the auspicious day of the First Sermon of Lord Buddha, with 60 monks and nuns.",
-    anchor: "/#shedra",
+    anchor: "/legacy#shedra",
   },
   {
     id: "foundation",
@@ -583,7 +583,7 @@ export const lifeEvents: LifeEvent[] = [
     title: "Establishment of Duejom Terling Shedra Foundation",
     description:
       "On 21 November 2014, established the non-profit foundation to help uphold the light of Buddha Dharma.",
-    anchor: "/#foundation",
+    anchor: "/foundation",
   },
   {
     id: "present",
@@ -591,7 +591,7 @@ export const lifeEvents: LifeEvent[] = [
     title: "Thirteen institutions and meditation centers",
     description:
       "Today, thirteen institutions and meditation centers, including two in Arunachal Pradesh, India.",
-    anchor: "/#legacy",
+    anchor: "/legacy#legacy",
   },
 ];
 
