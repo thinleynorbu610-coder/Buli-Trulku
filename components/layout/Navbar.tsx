@@ -155,19 +155,20 @@ export function Navbar() {
       <div
         id="mobile-menu"
         className={cn(
-          "fixed inset-0 z-40 flex flex-col justify-center bg-night px-10 transition-opacity duration-500 lg:hidden",
+          // starts below the header and scrolls on short screens, so no item is ever cut off
+          "fixed inset-0 z-40 flex flex-col overflow-y-auto bg-night px-8 pb-10 pt-24 transition-opacity duration-500 sm:px-10 lg:hidden",
           menuOpen ? "opacity-100" : "pointer-events-none opacity-0",
         )}
         aria-hidden={!menuOpen}
       >
-        <ul className="space-y-1">
+        <ul className="my-auto">
           {nav.map((item) => (
             <li key={item.key}>
               <Link
                 href={item.href}
                 tabIndex={menuOpen ? 0 : -1}
                 onClick={() => setMenuOpen(false)}
-                className="block border-b border-gold/15 py-4 font-display text-4xl text-ivory transition hover:text-gold-light"
+                className="block border-b border-gold/15 py-3.5 font-display text-2xl tracking-[0.04em] text-ivory transition hover:text-gold-light sm:text-3xl"
               >
                 {t(`nav.${item.key}` as MessageKey)}
               </Link>
